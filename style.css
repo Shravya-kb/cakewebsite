@@ -2,27 +2,30 @@
     padding: 0%;
     margin: 0%;
 }
+html {
+    scroll-behavior: smooth;
+  }
 body{
-    background-color: #e2ded9;
+    background-color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .container{
     background-color: white;
-    width: 90%;
+    width: 95%;
     height: 470vh;
     /* padding: 0px 20px ; */
 }
 .navbar{
+    background-color: white;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
-
 }
 .logo{
-    width: 90px;
+    width: 100px;
 }
 .list{
     display: inline;
@@ -32,15 +35,20 @@ body{
 .link{
     text-decoration: none;
     color: black;
-    font-weight: bold;
+    font-weight: bold; 
+    padding-bottom: 5px;
+    text-transform: uppercase;
 }
-.icon{
+.link:hover{
+    border-bottom: 1px solid;
+}
+.nav-icon{
    display: inline;
    margin-left:  10px;
     margin-top: -35px;
 
 }
-.icon i{
+.nav-icon i{
     color: black;
 }
 .img-container img{
@@ -52,9 +60,8 @@ body{
 }
 .btn-container{
     position: absolute;
-    top: 50%;
-    left: 25%;
-    transform: translate(-50%, -50%);
+    top: 38%;
+    left: 63%;
 }
 .btn-container h1{
     font-family: 'Ubuntu Condensed', sans-serif;
@@ -87,19 +94,31 @@ body{
 .item-container{
     display: flex;
     justify-content: space-evenly;
-    margin: 20px 0px;
+    margin: 0px 0px 20px 0px;
 
+}
+.nw{
+    margin: 30px 0px 0px 10px;
 }
 .item{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column;
+    padding: 30px;
+}
+.item:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .item img{
     width: 300px;
     height: 300px;
+}
+.item span{
+    color: orange;
+    font-weight: bold;
+    font-size: 15px;
 }
 .item h3,a{
     margin: 10px 0px;
@@ -117,21 +136,50 @@ body{
     background-color: white;
     color: black;
 }
+.popular-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.popular-container img{
+    width: 230px;
+    height: 230px;
+    margin-bottom: 15px;
+}
+.popular h2{
+    margin: 15px;
+}
+.popular p{
+    text-align: center;
+    color: #000;
+}
+.popular a{
+    color: black;
+}
+.popular h4{
+    text-align: center;
+}
+.popular img:hover{
+    transform: scale(1.06);
+    transition: 0.5s;
+}
 .offer-container{
     margin: 70px 0px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .offer-container img{
-    width: 100%;
+    width: 90%;
     height: 85vh;
+    margin-left: 10%;
 }
 .offer-container{
     position: relative;
 }
 .offer-content{
     position: absolute;
-    top: 40%;
-    left: 70%;
-    transform: translate(-30%, -70%);
+    top: 30%;
+    left: 20%;
+    transform: translate(-30%, -10%);
 }
 .offer-content h2,p,a{
     margin: 10px 0px;
@@ -139,9 +187,21 @@ body{
 .offer-content h2{
     font-size: 40px;
 }
+.offer-content h1{
+    font-size: 50px;
+    color: #9e0b0b;
+}
+.offer-content h3{
+    font-size: 35px;
+}
+.offer-content h4{
+    margin-top: 20px;
+    font-size: 30px;
+}
+
 .offer-content a{
-    background-color: transparent;
-    color: black;
+    background-color: black;
+    color: rgb(255, 255, 255);
     padding: 5px 20px;
     margin: 20px 0px;
     display: inline-block;
@@ -151,8 +211,8 @@ body{
     font-weight: bold;
 }
 .offer-content a:hover{
-    background-color: black;
-    color: white;
+    background-color: rgb(247, 247, 247);
+    color: rgb(0, 0, 0);
 }
 .type-content{
     text-align: center;
@@ -165,19 +225,49 @@ body{
     font-size: 30px;
 }
 .type-img{
+    margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    gap: 40px;
     text-align: center;
 
 }
-.type-img img{
+.types{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 50vh;
+}
+.type-img .cupcake{
     width: 200px;
     height: 200px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+.type-img .cupcake:hover{
+    transform: scale(1.14);
+    transition: 0.5s;
 }
 .type-img span{
     color: orange;
     font-weight: bold;
     font-size: 15px;
+}
+.rate{
+    width: 70px;
+    height: 35px;
+}
+.type-btn{
+    background-color: white(0, 0, 0);
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    border: 1px solid;
+    display: inline-block;
+}
+.type-btn:hover{
+    background-color: black;
+    color: white;
 }
 .type-img h4{
     text-transform: uppercase;
@@ -190,7 +280,7 @@ body{
 }
 .about-content{
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 60%;
     transform: translate(-30%, -70%);
 
@@ -204,15 +294,80 @@ body{
     margin-top: 20px;
 }
 .about-content h3{
-    text-align: center;
+    font-size: 15px;
 }
-.icon-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
+.about-content h2{
+    font-size: 50px;
+}
+.about-content p{
+    font-size: 16px;
+}
+.icon{
+    display: inline;
+    margin: 0px 10px;
 }
 .icon i{
-    font-size: 15px;
-    color: #000;
+    font-size: 20px;
+    color: #ffffff;
+}
+.icon i:hover{
+    transform: scale(1.6);
+    transition: 0.7s;
+}
+.copyright{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+.footer{
+    background-color: #26272b;
+    width: 100%;
+    color: #ffffff;
+}
+.footer-container{
+    display: grid;
+    grid-template-columns:  repeat(3,1fr);
+}
+.about-shop{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.about-shop h2{
+   color: white;
+   font-size: 35px;
+   margin-bottom: 20px;
+}
+.top-links{
+    margin: 50px 0px;
+}
+.top-links h2{
+    margin-bottom: 10px;
+}
+.top-links ul{
+    list-style: none;
+    font-size: 17px;
+    line-height: 30px;
+}
+.contact-info{
+    margin: 50px 0px;
+}
+.contact-info h2{
+    margin-bottom: 10px;
+}
+.contact-info ul{
+    list-style: none;
+    font-size: 17px;
+    line-height: 35px;
+}
+.footer p{
+    text-align: center;
+}
+.up-arrow{
+    float: right;
+    margin: 0px 20px 30px 0px;
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+    font-size: 30px;
 }
